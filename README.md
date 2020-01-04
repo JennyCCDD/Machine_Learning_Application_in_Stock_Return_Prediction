@@ -1,10 +1,10 @@
 # Machine_Learning_Application_in_Stock_Return_Prediction
 sh300 index and components' return prediction by machine learning and deep learning.
-\\
+
 This is the final project of the course Learning from Data in TBSI.
-\\
+
 The returns of CSI 300 index on unsystematic risk is important and relative predictable, which reflects stock price changes in Chinese stock market, and the basic approach in index prediction lies in finding the effective alpha factors. This project aims to construct an index time series forecasting model with multi alpha factors through using several machine learning algorithms. Our 112 alpha factors are all from the transaction data through deriving, changing and synthesizing the information like price, turnover and so on. Based on daily frequency trade data from China in the recent 10 years, we establish a transactional alpha model using supervised learning models. We compare the ability to predict index returns of Linear Regression models, Tree models and classic Neural Networks. Considering the effect of time series, we set the time windows as 21 work days, which means that there are 2352 (21days*112alphas) features for models without time series prediction ability, and 112 features for models with time series prediction ability.
-\\
+
 The results show that the effectiveness of Neural Networks is better Linear Regression models and Tree models. Specifically, ARD Regression, LSTM (Long Short-Term Memory) algorithm and Extra Tree algorithm perform best in Linear Regression models, Tree models and Neural Networks separately. Nevertheless, feature selection is hardly helpful for improving the effectiveness of model prediction ability.
-\\
+
 Furthermore, we construct a stock portfolio based on LSTM with setting loss function as MSE by using 000300.SH stocks. With completing the portfolio reallocation every 21 trading days, our long portfolio choosing the 30 stocks with highest predicted daily return, while short portfolio choosing the 30 stocks with the lowest predicted daily return. The annual return in the back test period (2017/12/5-2019/10/31) of long portfolio, short portfolio and long minus short portfolio are 0.60%, -47.61%	and 63.29% respectively.
